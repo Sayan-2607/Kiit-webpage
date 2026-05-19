@@ -1,0 +1,38 @@
+.campus-hl__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.campus-hl__card {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.campus-hl__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.campus-hl__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.campus-hl__desc {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .campus-hl__grid { grid-template-columns: 1fr; }
+}

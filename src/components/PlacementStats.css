@@ -1,0 +1,107 @@
+.placements {
+  position: relative;
+  background: linear-gradient(135deg, #0A0A0A 0%, #0F1F0F 50%, #0A2A14 100%);
+  overflow: hidden;
+}
+
+.placements__bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    radial-gradient(circle at 30% 70%, var(--green) 1px, transparent 1px),
+    radial-gradient(circle at 70% 30%, var(--green) 1px, transparent 1px);
+  background-size: 50px 50px, 70px 70px;
+}
+
+.placements__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.placements__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.placements__stat {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: var(--border-radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: background 0.25s;
+}
+
+.placements__stat:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.placements__stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--green);
+  line-height: 1.1;
+}
+
+.placements__stat-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 6px;
+}
+
+.placements__stat-sub {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+.placements__recruiters {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.placements__recruiters-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.placements__recruiters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.placements__recruiter {
+  padding: 8px 20px;
+  border-radius: var(--border-radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.placements__recruiter:hover {
+  background: rgba(31, 193, 102, 0.12);
+  border-color: rgba(31, 193, 102, 0.3);
+  color: var(--green);
+}
+
+@media (max-width: 640px) {
+  .placements__stats { grid-template-columns: repeat(2, 1fr); }
+  .placements__stat-value { font-size: 28px; }
+}

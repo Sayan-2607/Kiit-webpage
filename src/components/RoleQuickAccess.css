@@ -1,0 +1,102 @@
+.role-access__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.role-access__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.role-access__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--border-radius-full);
+  border: 1px solid var(--grey-border);
+  background: var(--white);
+  color: var(--grey);
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s var(--ease-out);
+}
+
+.role-access__tab:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.role-access__tab.active {
+  background: var(--green-light);
+  border-color: var(--green);
+  color: var(--green-dark);
+  box-shadow: 0 0 0 3px rgba(31, 193, 102, 0.1);
+}
+
+.role-access__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.role-access__card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--grey-border);
+  background: var(--white);
+  transition: all 0.2s var(--ease-out);
+  animation: fadeInUp 0.4s var(--ease-out) forwards;
+  opacity: 0;
+}
+
+.role-access__card:hover {
+  border-color: var(--green);
+  box-shadow: 0 4px 20px rgba(31, 193, 102, 0.1);
+  transform: translateX(4px);
+}
+
+.role-access__card-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-light);
+  border-radius: 12px;
+}
+
+.role-access__card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.role-access__card-label {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--black);
+}
+
+.role-access__card-desc {
+  display: block;
+  font-size: 13px;
+  color: var(--grey);
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .role-access__tabs { gap: 6px; }
+  .role-access__tab { padding: 10px 18px; font-size: 14px; }
+  .role-access__grid { grid-template-columns: 1fr; }
+}

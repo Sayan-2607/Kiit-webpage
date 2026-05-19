@@ -1,0 +1,138 @@
+.footer {
+  background: var(--black);
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-2xl) 0 0;
+}
+
+[data-theme="dark"] .footer {
+  background: #080808;
+}
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(5, 1fr);
+  gap: 32px;
+  padding-bottom: var(--space-2xl);
+}
+
+.footer__brand { padding-right: 20px; }
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.footer__logo-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.footer__logo-sub {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 18px;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s;
+}
+
+.footer__contact-item:hover {
+  color: var(--green);
+}
+
+.footer__col-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.15s, padding-left 0.15s;
+}
+
+.footer__link:hover {
+  color: var(--green);
+  padding-left: 4px;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__legal a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.15s;
+}
+
+.footer__legal a:hover { color: var(--green); }
+
+@media (max-width: 960px) {
+  .footer__main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__legal { justify-content: center; }
+}
